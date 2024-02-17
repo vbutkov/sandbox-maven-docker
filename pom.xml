@@ -51,13 +51,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <configuration>
+                    <image>
+                        <bindings>
+                            <binding>
+                                ${project.basedir}/platform/bindings:/platform/bindings
+                            </binding>
+                        </bindings>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>
