@@ -1,1 +1,1 @@
-# sandbox-maven-docker
+# Example sandbox-maven-docker
